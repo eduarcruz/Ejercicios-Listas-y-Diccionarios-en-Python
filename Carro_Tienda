@@ -1,0 +1,32 @@
+# Ejercicio 1: Simular un carrito de compras con listas
+
+# 1. Partir de una lista vacía llamada carrito
+carrito = []
+
+# 2. Agregar cinco productos de mecato / compras
+carrito.append("papitas")
+carrito.append("galletas")
+carrito.append("chocolates")
+carrito.append("helados")
+carrito.append("gaseosa")
+
+# 3. Insertar un producto en la primera posición
+carrito.insert(0, "jugo hit")
+
+# 4. Eliminar un producto que se haya acabado (ej: helados)
+carrito.remove("helados")
+
+# 5. Mostrar el carrito completo, el primer y último artículo, y el total de productos
+print("--- CARRITO DE COMPRAS ---")
+print("Carrito completo:", carrito)
+print("Primer artículo:", carrito[0])
+print("Último artículo:", carrito[-1])
+print("Total de productos en el carrito:", len(carrito))
+
+# 6. Verificar si un producto en particular (por ejemplo: arroz) quedó en el carrito
+producto_buscado = "arroz"
+if producto_buscado in carrito:
+  print(f"El producto '{producto_buscado}' sí está en el carrito.")
+else:
+  print(f"El producto '{producto_buscado}' NO está en el carrito.")
+

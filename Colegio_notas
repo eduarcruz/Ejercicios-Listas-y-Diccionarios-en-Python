@@ -1,0 +1,36 @@
+# Ejercicio 3: Calificaciones
+
+# 1. Diccionario con 6 materias y listas con al menos cuatro notas cada una
+calificaciones = {
+    "Matemáticas": [3.5, 4.0, 4.5, 3.8],
+    "Español": [4.0, 4.2, 4.1, 4.3],
+    "Programación": [4.8, 5.0, 4.5, 4.9],
+    "Ciencias Naturales": [3.0, 3.5, 3.2, 3.6],
+    "Historia": [4.2, 3.9, 4.0, 4.1],
+    "Inglés": [4.5, 4.6, 4.8, 4.7],
+}
+
+print("--- RESUMEN DE CALIFICACIONES ---")
+mejor_materia = ""
+mejor_promedio_valor = -1.0
+
+# 2. Calcular promedio con sum() y len(), y determinar la materia con mejor promedio con un ciclo y acumulador
+for materia, notas in calificaciones.items():
+  promedio = sum(notas) / len(notas)
+  nota_maxima = max(notas)  # Mostrar la nota más alta con max()
+
+  print(
+      f"Materia: {materia} | Promedio: {promedio:.2f} | Nota más alta:"
+      f" {nota_maxima}"
+  )
+
+  # Acumulador para encontrar el mejor promedio
+  if promedio > mejor_promedio_valor:
+    mejor_promedio_valor = promedio
+    mejor_materia = materia
+
+print(
+    f"\nLa materia con mejor promedio es: {mejor_materia} con un promedio de"
+    f" {mejor_promedio_valor:.2f}"
+)
+

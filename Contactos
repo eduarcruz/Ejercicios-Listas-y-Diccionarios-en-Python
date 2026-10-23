@@ -1,0 +1,37 @@
+# Ejercicio 2: La agenda de contactos con diccionarios
+
+# 1. Diccionario con 10 contactos 
+agenda = {
+    "Carlos Pérez": "3101234567",
+    "Ana Gómez": "3209876543",
+    "Luis Torres": "3154567890",
+    "María Ruiz": "3187654321",
+    "Pedro Infante": "3001112233",
+    "Sofía Vergara": "3112223344",
+    "Jorge Cárdenas": "3123334455",
+    "Lucía Méndez": "3134445566",
+    "Andrés Parra": "3145556677",
+    "Camila Valle": "3166667788",
+}
+
+# 2. Consultar un contacto que exista y uno que no exista con el valor por defecto "No registrado"
+print("--- CONSULTA DE CONTACTOS ---")
+print("Teléfono de Ana Gómez (Existe):", agenda["Ana Gómez"])
+print(
+    "Teléfono de Roberto Gómez (No existe):",
+    agenda.get("Roberto Gómez", "No registrado"),
+)
+
+# 3. Agregar un contacto nuevo
+agenda["Daniela Soto"] = "3199998877"
+
+# 4. Sobrescribir el teléfono de otro (ej: Carlos Pérez)
+agenda["Carlos Pérez"] = "3019998877"
+
+# 5. Eliminar a un tercero con del (ej: Pedro Infante)
+del agenda["Pedro Infante"]
+
+# 6. Cierre con un recorrido de items que imprima la agenda final completa
+print("\n--- AGENDA FINAL COMPLETA ---")
+for nombre, telefono in agenda.items():
+  print(f"Contacto: {nombre} | Teléfono: {telefono}")
